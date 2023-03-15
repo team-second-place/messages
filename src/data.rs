@@ -1,7 +1,6 @@
 use crate::wasm_bindgen;
 use crate::{Deserialize, Serialize};
 
-
 // TODO: replace with real data like from the low level design
 
 #[wasm_bindgen]
