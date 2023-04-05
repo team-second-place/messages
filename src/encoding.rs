@@ -82,6 +82,7 @@ create_encoders_and_decoders_for!(
     (crate::communication::ToUser, to_user),
 );
 
+#[cfg(not(target_arch = "wasm32"))]
 #[cfg(test)]
 mod tests {
     use crate::{decode_to_microcontroller, encode_to_microcontroller, ToMicrocontroller};

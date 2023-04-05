@@ -1,9 +1,11 @@
 use cfg_if::cfg_if;
 
-#[cfg(target_arch = "wasm32")]
-use wasm_bindgen::prelude::*;
+// Had to disable WASM and start writing the messages by hand as msgpack in the website :(
 
-#[cfg(not(target_arch = "wasm32"))]
+// #[cfg(target_arch = "wasm32")]
+// use wasm_bindgen::prelude::*;
+
+// #[cfg(not(target_arch = "wasm32"))]
 use noop_proc_macro::wasm_bindgen;
 
 cfg_if! {

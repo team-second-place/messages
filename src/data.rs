@@ -34,7 +34,6 @@ pub struct LightEffectForceEndBrightness {
     lumens: u32,
 }
 
-#[wasm_bindgen]
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub enum LightEffect {
     LightEffectDesiredBrightness(LightEffectDesiredBrightness),
@@ -44,17 +43,17 @@ pub enum LightEffect {
 #[wasm_bindgen]
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Timer {
-    effect: LightEffect,
-    weekday: u8,
-    hour: u8,
-    minute: u8,
+    pub effect: LightEffect,
+    pub weekday: u8,
+    pub hour: u8,
+    pub minute: u8,
 }
 
 #[wasm_bindgen]
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Preferences {
-    name: String,
-    timers: Vec<Timer>,
+    pub name: String,
+    pub timers: Vec<Timer>,
 }
 
 // TODO: https://rustwasm.github.io/docs/wasm-bindgen/reference/attributes/on-rust-exports/typescript_custom_section.html
